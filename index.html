@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+    CS412 Web App Development Project 5
+    Partners Cafe - Sponsored Project 
+    Author - Edin Ziga 190302192
+	  Last edit - January 2nd, 2022
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀ 
+⠀⠀⣀⣤⣴⣶⣶⣿⡟⠀ ⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀ 
+⠀⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⣿⠀ 
+⠀⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀ 
+⠀⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀ 
+⠀⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀ 
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀ 
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀ 
+⠀⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀ 
+⠀⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀ 
+⠀⠀⠛⢿⣿⣿⣿⣿⣇⠀ ⠀⠀⣰⣿⣿⣷⣶⣶⣶⣶⠶⠀⢠⣿⣿⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀⢸⣿⡇⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣸⣿⠇⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  -->
+
+	<!-- META Tags-->
+	<meta name="viewpoint" content="width=device-width, inital-scale-1, shrink-to-fit=yes">
+	<meta charset="utf-8">
+	
+    <!-- Bootstrap CSS & JS-->
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  <script src="assets/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+	  <!--Title and icon-->
+	  <title>Partners Cafe</title>
+  	<link href="assets/images/logo crna podloga (1).png" rel="shortcut icon" >
+</head>
+
+<body>
+    <!--Progress Bar on top-->
+    <header class="fixed-top" 
+    style="background-color: transparent;font-size: 120%;">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+       <!--Navigation Bar-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2"></div>
+        <div class="col-8">
+          <ul class="nav nav-pills mb-3 justify-content-center nav-justified" id="pills-tab" style="padding-top: 20px;" role="tablist">
+           
+            <li class="nav-item">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" 
+              aria-controls="pills-home" aria-selected="true">Home</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" 
+              aria-controls="pills-contact" aria-selected="false">Find Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    </header>
+        
+    <div class="tab-content" id="pills-tabContent">
+        <!-- Tab Content 1/Main Home Page-->
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <!--First Part of Home Page-->  
+          <div class="parallax1 clearfix container-fluid">
+              <div class="row">
+                <div class="col-xl">
+                 <!-- The video -->
+                  <video class="rounded"autoplay muted loop controls id="myVideo">
+                    <source src="assets/videos/Main video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <!--Text and Image-->
+                <div class="col-xl" style="text-align: center;">
+                  <div id="MainText">
+                    <h1 id="MTVU" style="opacity: 0;">"Your enjoyment,</h1>
+                    <h1 id="MTNZ" style="opacity: 0;">&nbsp;our pleasure"</h1>
+                    <div class="logo" style="opacity: 0;">
+                      <img src="assets/images/logo crna podloga (1).png" 
+                      style="width: 50%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Two parralax effects underneath -->
+            <div class="container-fluid parallax2">
+              <h1 class="text rounded">Morning coffee?</h1>
+            </div>
+            <div class="container-fluid parallax3">
+              <h1 class="text rounded">or evening rest?</h1>
+            </div>
+
+            <!-- Last part of the page -->
+            <div class="container-fluid parallax4">
+              <div class="row">
+                <div class="col" >
+                  <h1 class="h1Last">We are here for you!</h1>
+                  <p  class="lastText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a blandit metus.
+                    Praesent quis elit at massa convallis mollis. Quisque sed rutrum lectus.
+                    Donec semper ante eu felis varius, et sagittis augue pulvinar. Mauris sed enim id sem tristique vehicula. </p>
+                    <p class="lastText">
+                      Nulla ultrices augue quis cursus porttitor. ulla facilisi. Donec lacus nulla, tincidunt quis mauris a, sodales bibendum magna. </p>
+                      <img id="secondLogo" src="assets/images/logo crna podloga (1).png">
+                </div>
+                
+              </div>
+            </div>
+        </div>
+         
+        <!-- Contact Tab -->
+        <div class="tab-pane fade clearfix" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" 
+        style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/SecondPage.jpg');
+        background-size: cover; height: 84vh; background-position: center;" id="mainContactContainer">
+          <div class="container-fluid clearfix" id="mainContactUs">
+           <div class="row">
+             <div class="col-1"></div>
+             <div class="col-xl" style="text-align: center;">
+              <div class="row" id="FindUsInfo" >
+                
+                <div class="col-lg" style="padding-bottom: 5%;">
+                  <span class="material-icons-outlined">call</span>
+                  <h4>Contact:</h4>
+                  <p>+1 12 345 6789</p>
+                  <p>samplemail@mailprovider.com</p>
+                  
+                </div>
+                <div class="col-lg"style="padding-bottom: 5%;">
+                  <span class="material-icons-outlined" >pin_drop</span>
+                    <h4>Address:</h4>
+                    <p>Sample Address 123A</p> 
+                    <p>City 123456</p>
+                </div>
+                <div class="col-lg">
+                  <span class="material-icons-outlined">schedule</span>
+                  <h4>Working Hours:</h4>
+                  <div>
+                    <p>Mon - Sat:  07:00 - 23:00 </p>
+                    <p>Sun:  08:00 - 22:00 </p>
+                  </div>
+              </div>
+
+              </div>
+              <!-- Google Maps -->
+              <div class="row">
+                <div class="col" style="padding-top: 5%; text-align: center;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57601379.71352325!2d-75.20369914973361!3d28.216146096818605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xadd28c30ec90d79%3A0x44652457c0696504!2sSjeverni%20Atlantski%20okean!5e0!3m2!1sbs!2sba!4v1665137628031!5m2!1sbs!2sba" 
+              class="rounded" width="85%" height="300px" style="border:rgba(199,166,79,255) solid 4px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
+              </div>
+             <div class="col"></div>
+           </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer With Instagram and Facebook links-->
+      <div class="footer-basic">
+        <footer>
+          <div class="social">
+            <a href="https://www.instagram.com" target=”_blank”><i class="icon ion-social-instagram"></i></a>
+            <a href="https://www.facebook.com" target=”_blank”><i class="icon ion-social-facebook"></i></a>
+          </div>
+
+          <p class="copyright">Designed by Edin Žiga | All Rights Reserved 2022 ©</p>
+          
+        </footer>
+        </div>            
+    
+    
+</body>
+
+<!--Wizardry-->
+<script src="scripts.js"></script>
+</html>
