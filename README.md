@@ -1,5 +1,5 @@
 # Coffee Shop Website
-Github pages link: https://darkxscar.github.io/Coffee-Shop-Website/
+Github pages link: https://edinziga.github.io/Coffee-Shop-Website/
 ## Description
  Coffee shop website used as final project for CS412 Web Application Development.  
 ## How to run
